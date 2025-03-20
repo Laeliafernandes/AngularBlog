@@ -1,0 +1,26 @@
+<app-menu-title></app-menu-title>
+
+<div class="container__articles">
+  <div class="articles__main">
+    <app-big-card
+      [Id]="mainArticle.id"
+      [photoCover]="mainArticle.photoCover"
+      [cardTitle]="mainArticle.title"
+      [cardDescription]="mainArticle.description"
+    >
+    </app-big-card>
+  </div>
+  
+  <div class="articles__others">
+    <app-small-card
+      *ngFor="let article of otherArticles"
+      [Id]="article.id"
+      [cardTitle]="article.title"
+      [cardDescription]="article.description"
+      [photoCover]="article.photoCover"
+     
+    >
+    </app-small-card>
+  </div>
+  
+</div>
